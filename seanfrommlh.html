@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sean from MLH</title>
+
+	<style>
+		body {
+			text-align: center;
+			font-family: sans-serif;
+			background-image: url("sean.png");
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		#incrementButton {
+			background-color: #000080;
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 20px;
+
+			margin-top: 20px;
+			margin-bottom: 30px;
+		}
+
+		#numTimes {
+			font-size: 250px;
+			line-height: 0.05;
+			color: white;
+		}
+
+		h1 {
+			font-size: 45px;
+		}
+
+	</style>
+
+	<script>
+		var times = 0;
+
+		function incrementCount() {
+			times++;
+			document.getElementById("numTimes").innerHTML = String(times);
+
+			if(times == 100) {
+				document.getElementById("numTimes").innerHTML = "STOP";
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>How many times has Lily said the phrase "Sean from MLH"?</h1>
+	<p id="numTimes">0</p>
+	<button id="incrementButton" onclick="incrementCount()">she said it again</button>
+</body>
+</html>
